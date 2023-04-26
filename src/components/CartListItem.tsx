@@ -1,7 +1,11 @@
 import { View, Text, StyleSheet, Image } from "react-native"
 import IconF from 'react-native-vector-icons/Feather'
+import { CardItem } from "../../types"
+import { FC } from "react"
 
-const CartListItem = ({ cartItem }) => {
+
+interface ICartListItem { cartItem: CardItem}
+const CartListItem:FC<ICartListItem> = ({ cartItem }) => {
   const increaseQuantity = () => {}
 
   const decreaseQuantity = () => {}

@@ -3,18 +3,26 @@ import {
   View,
   FlatList,
   StyleSheet,
+  Pressable,
 } from 'react-native';
 
 import products from '../data/products';
+import { useNavigation } from '@react-navigation/native';
+import { FC } from 'react';
 
-const ProductScreen = () => {
+interface IProductsScreen { navigation: any }
+
+const ProductsScreen:FC<IProductsScreen> = ({ navigation }) => {
+
   return (
     <FlatList 
         data={products}
         renderItem={({ item }) => (
-          <View style={styles.itemContainer}>
+          <Pressable 
+            onPress={() => navigation.navigate('Product Details')} 
+            style={styles.itemContainer}>
             <Image source={{ uri: item.image }} style={styles.image} />
-          </View>
+          </Pressable>
         )}
         numColumns={2}
         scrollEnabled={true}
@@ -32,4 +40,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ProductScreen;
+export default ProductsScreen;

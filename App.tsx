@@ -1,22 +1,15 @@
 import {
-  SafeAreaView,
   StatusBar,
   StyleSheet,
-  Image,
   View,
-  FlatList,
 } from 'react-native';
 
-import ProductScreen from './src/screens/ProductScreen'
-import ProductDetailsScreen from './src/screens/ProductDetailsScreen'
-import ShoppingCartScreen from './src/screens/ShoppingCartScreen'
+import Navigation from './src/navigation';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <ProductScreen/> */}
-      {/* <ProductDetailsScreen/> */}
-      <ShoppingCartScreen />
+      <Navigation />
 
       <StatusBar barStyle="default"/>
       </View>
