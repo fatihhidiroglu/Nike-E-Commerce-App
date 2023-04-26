@@ -34,10 +34,13 @@ const Navigation = () => {
             ),
           })} 
         />
+
         <Stack.Screen 
           name="Product Details" 
           component={ ProductDetailsScreen }
-          options={{ presentation: 'modal' }}/>
+          options={{ presentation: 'modal' }}
+        />
+        
         <Stack.Screen name="Cart" component={ShoppingCartScreen} />
       </Stack.Navigator>
     </NavigationContainer>
