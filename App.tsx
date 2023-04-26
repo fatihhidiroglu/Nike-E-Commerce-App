@@ -9,12 +9,14 @@ import {
 
 import ProductScreen from './src/screens/ProductScreen'
 import ProductDetailsScreen from './src/screens/ProductDetailsScreen'
+import ShoppingCartScreen from './src/screens/ShoppingCartScreen'
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <ProductScreen/> */}
-      <ProductDetailsScreen/>
+      {/* <ProductDetailsScreen/> */}
+      <ShoppingCartScreen />
 
       <StatusBar barStyle="default"/>
       </View>
